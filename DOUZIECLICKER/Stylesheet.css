@@ -23,7 +23,6 @@ body {
     margin: 0;
     background-color: #D9D9D9;
     align-items: center;
-
 }
 
 #idScore {
@@ -217,4 +216,26 @@ h1 {
     height: 0.26vw;
     background-color: black;
     width: 22vw;
+}
+
+#particuleOnOff {
+    margin: 250px 0 0 0;
+}
+
+#particuleOnOff button {
+    width: 100px;
+    height: 33px;
+    background-color: black;
+    color: #FFFFFF;
+    border: None;
+}
+
+#particuleOnOff button:hover {
+    background-color: gray;
+    color: #801313;
+}
+
+#particuleOnOff button:active {
+    background-color: whitesmoke;
+    color: #801313;
 }
