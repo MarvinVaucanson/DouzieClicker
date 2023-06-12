@@ -59,16 +59,29 @@ achattps.addEventListener('click', () => {
         score -= prixAchattps;
         score = Math.round(score * 100) / 100;
         scoreLabel.textContent = score + ' Tolves';
-        nbAchattps += 1;
         tpsUpgrade += 1;
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
         prixAchattps = 20 * 1.15 ** nbAchattps;
         prixAchattps = prixAchattps.toFixed(2);
         achattps.textContent = 'TPS coût : ' + prixAchattps;
     }
-    /* Autres actions que vous souhaitez effectuer */
 });
 
+achattps2.addEventListener('click', () => {
+    
+    if (score >= prixAchattps2) {
+        nbAchattps2 += 1;
+        labelAchatTps2.textContent = nbAchattps2;
+        score -= prixAchattps2;
+        score = Math.round(score * 100) / 100;
+        scoreLabel.textContent = score + ' Tolves';
+        tpsUpgrade += 1;
+        labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
+        prixAchattps2 = 100 * 1.15 ** nbAchattps2;
+        prixAchattps2 = prixAchattps2.toFixed(2);
+        achattps2.textContent = 'TPS coût : ' + prixAchattps2;
+    }
+});
 
 achat1.addEventListener('click', () => {
     if (score >= prixAchat1) {
