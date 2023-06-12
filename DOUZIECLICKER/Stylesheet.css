@@ -50,7 +50,7 @@ body {
 }
 
 #DOUZE {
-    height: 13.02vw;
+    height: 13vw;
     animation: spin 150s linear infinite;
 }
 
@@ -68,8 +68,8 @@ body {
     border: none;
 
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 12.5vw;
+    height: 12.5vw;
     font-size: 16px;
     z-index: 10;
     border-radius: 100%;
@@ -138,7 +138,7 @@ body {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 2.5vw;
     color: #FFFFFF;
     font-family: "Arial", serif;
     text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;}
