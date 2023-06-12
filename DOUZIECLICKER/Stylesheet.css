@@ -1,0 +1,220 @@
+:root{
+    --taille: 47.8645833vw;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+#pagePleine {
+    display: flex;
+}
+
+#pageClick {
+    display: flex;
+    flex-direction: column;
+    width: 34vw;
+    height: var(--taille);
+    margin: 0;
+    background-color: #D9D9D9;
+    align-items: center;
+
+}
+
+#idScore {
+    margin-top: 2.083vw;
+    display: flex;
+    justify-content: center;
+    width: 24.27vw;
+    height: 8.125vw;
+    background-color: #FFFFFF;
+    border: black solid 3px;
+}
+
+#Score {
+    font-size: 3.125vw;
+    justify-content: center;
+    align-self: center;
+    font-weight: bold;
+}
+
+#tolveParSec {
+    font-weight: bold;
+    font-size: 1.302vw;
+    margin-top: 0.26vw;
+}
+
+#DOUZE {
+    height: 13.02vw;
+    animation: spin 150s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+#grosBoutonDouze {
+    margin-top: 4vw;
+}
+
+#boutonPrincipal {
+    background-color: #D9D9D9;
+    border: none;
+
+    position: relative;
+    width: 250px;
+    height: 250px;
+    font-size: 16px;
+    z-index: 10;
+    border-radius: 100%;
+}
+
+#boutonPrincipal::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+}
+
+.divParticule {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.particule {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Ctext x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="80"%3E12%3C/text%3E%3C/svg%3E');
+    pointer-events: none;
+    animation: particlesAnimation 1s linear forwards;
+}
+
+@keyframes particlesAnimation {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--tx), var(--ty)) rotate(var(--r));
+    }
+}
+
+.entrePages {
+    width: 0.625vw;
+    height: var(--taille);
+    background-color: black;
+}
+
+#pageMagasin {
+    display: flex;
+    flex-direction: column;
+    width: 43vw;
+    height: var(--taille);
+}
+
+#magasin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #801313;
+    height: 6.302vw;
+}
+
+h1 {
+    font-size: 50px;
+    color: #FFFFFF;
+    font-family: "Arial", serif;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;}
+
+#pageMagasin .entreLignes {
+    width: 43vw;
+    height: 0.26vw;
+    background-color: black;
+}
+
+#magasin2 {
+    width: 43vw;
+    height: 8.854vw;
+    background-color: #CB9B6E;
+}
+
+#shopGlissant {
+    display: grid;
+    grid-template-rows: repeat(6, 5.3647638833vw);
+}
+
+.item {
+    position: relative;
+}
+
+.item .entreLignes {
+    position: absolute;
+    bottom: 0;
+}
+
+.item button {
+    background-color: #CB9B6E;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+#pageStats {
+    width: 22vw;
+    height: var(--taille);
+    background-color: #9ADFEB;
+}
+
+#Statistiques {
+    display: flex;
+    justify-content: center;
+    height: 6.302vw;
+    background-color: #009F9F;
+}
+
+#Statistiques h1 {
+    margin-left: 2.344vw;
+}
+
+#statGlobal {
+    display: flex;
+    flex-direction: column;
+    height: 18vw;
+}
+
+#statGlobal div {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.25vw;
+}
+
+#Réglages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.302vw;
+    background-color: #009F9F;
+}
+
+#pageStats .entreLignes{
+    height: 0.26vw;
+    background-color: black;
+    width: 22vw;
+}
