@@ -9,22 +9,25 @@ const achat1 = document.getElementById('achat1');
 const scoreLabel = document.getElementById('Score');
 const achat2 = document.getElementById('achat2');
 const achat3 = document.getElementById('achat3');
+const achat4 = document.getElementById('achat4');
 const labelTotal = document.getElementById('tolveTotal');
 const labelNbAchat1 = document.getElementById('nombreAchatClick1');
 const labelNbAchat2 = document.getElementById('nombreAchatClick2');
 const labelNbAchat3 = document.getElementById('nombreAchatClick3')
+const labelNbAchat4 = document.getElementById('nombreAchatClick4')
 const labelAchatTps1 = document.getElementById('nombreAchatTps1');
 const labelAchatTps2 = document.getElementById('nombreAchatTps2');
 const labelAchatTps3 = document.getElementById('nombreAchatTps3');
 const labelAchatTps4 = document.getElementById('nombreAchatTps4');
 const labeltpsmain = document.getElementById('tolveParSec');
 
-let score = 0;
+let score = 120000;
 let total = 0;
 let click = 1;
 let prixAchat1 = 17.25;
 let prixAchat2 = 115;
 let prixAchat3 = 1265;
+let prixAchat4 = 120000;
 let prixAchattps = 12;
 let prixAchattps2 = 1200;
 let prixAchattps3 = 12000;
@@ -32,6 +35,7 @@ let prixAchattps4 = 120000;
 let nbAchat1 = 0;
 let nbAchat2 = 0;
 let nbAchat3 = 0;
+let nbAchat4 = 0;
 let nbAchattps = 0;
 let nbAchattps2 = 0;
 let nbAchattps3 = 0;
@@ -170,21 +174,21 @@ achat3.addEventListener('click', () => {
         achat3.textContent = 'Achat3 coût : ' + prixAchat3;
     }
 });
-/*
+
 achat4.addEventListener('click', () => {
-    if (score >= prixAchat1) {
-        nbAchat1 += 1;
-        labelNbAchat1.textContent = nbAchat1;
-        score -= prixAchat1;
+    if (score >= prixAchat4) {
+        nbAchat4 += 1;
+        labelNbAchat4.textContent = nbAchat4;
+        score -= prixAchat4;
         score = Math.round(score * 100) / 100;
-        click += 1;
+        click += tpsUpgrade*0.12;
         scoreLabel.textContent = score + ' Tolves';
-        prixAchat1 = 17.25 * 1.15 ** nbAchat1;
-        prixAchat1 = prixAchat1.toFixed(2);
-        achat1.textContent = 'Achat1 coût : ' + prixAchat1;
+        prixAchat4= 120000 * 1.15 ** nbAchat4;
+        prixAchat4 = prixAchat4.toFixed(2);
+        achat4.textContent = 'Super Achat coût : ' + prixAchat4;
     }
 });
-
+/*
 achat5.addEventListener('click', () => {
     if (score >= prixAchat1) {
         nbAchat1 += 1;
