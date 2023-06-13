@@ -2,6 +2,7 @@
 
 const bouton1 = document.getElementById('boutonPrincipal');
 const achattps = document.getElementById('achattps');
+const achattps2 = document.getElementById('achattps2');
 const achat1 = document.getElementById('achat1');
 const scoreLabel = document.getElementById('Score');
 const achat2 = document.getElementById('achat2');
@@ -11,6 +12,7 @@ const labelNbAchat1 = document.getElementById('nombreAchatClick1');
 const labelNbAchat2 = document.getElementById('nombreAchatClick2');
 const labelNbAchat3 = document.getElementById('nombreAchatClick3')
 const labelAchatTps1 = document.getElementById('nombreAchatTps1');
+const labelAchatTps2 = document.getElementById('nombreAchatTps1');
 const labeltpsmain = document.getElementById('tolveParSec');
 
 let score = 0;
@@ -20,10 +22,12 @@ let prixAchat1 = 17.25;
 let prixAchat2 = 115;
 let prixAchat3 = 1265;
 let prixAchattps = 20;
+let prixAchattps2 = 100;
 let nbAchat1 = 0;
 let nbAchat2 = 0;
 let nbAchat3 = 0;
 let nbAchattps = 0;
+let nbAchattps2 = 0;
 let tpsUpgrade = 0;
 var intervalId;
 let particules = true;
@@ -76,7 +80,7 @@ achattps2.addEventListener('click', () => {
         score -= prixAchattps2;
         score = Math.round(score * 100) / 100;
         scoreLabel.textContent = score + ' Tolves';
-        tpsUpgrade += 1;
+        tpsUpgrade += 3;
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
         prixAchattps2 = 100 * 1.15 ** nbAchattps2;
         prixAchattps2 = prixAchattps2.toFixed(2);
