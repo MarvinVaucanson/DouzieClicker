@@ -150,9 +150,15 @@ h1 {
 }
 
 #magasin2 {
+    display: grid;
     width: 43vw;
     height: 8.854vw;
     background-color: #CB9B6E;
+}
+
+#achattps{
+    grid-column: 0,1;
+    grid-row: 0,1;
 }
 
 #shopGlissant {
