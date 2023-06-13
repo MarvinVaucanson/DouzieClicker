@@ -12,7 +12,7 @@ const labelNbAchat1 = document.getElementById('nombreAchatClick1');
 const labelNbAchat2 = document.getElementById('nombreAchatClick2');
 const labelNbAchat3 = document.getElementById('nombreAchatClick3')
 const labelAchatTps1 = document.getElementById('nombreAchatTps1');
-const labelAchatTps2 = document.getElementById('nombreAchatTps1');
+const labelAchatTps2 = document.getElementById('nombreAchatTps2');
 const labeltpsmain = document.getElementById('tolveParSec');
 
 let score = 0;
