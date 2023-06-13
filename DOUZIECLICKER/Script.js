@@ -19,16 +19,16 @@ const labelAchatTps3 = document.getElementById('nombreAchatTps3');
 const labelAchatTps4 = document.getElementById('nombreAchatTps4');
 const labeltpsmain = document.getElementById('tolveParSec');
 
-let score = 20000;
+let score = 0;
 let total = 0;
 let click = 1;
 let prixAchat1 = 17.25;
 let prixAchat2 = 115;
 let prixAchat3 = 1265;
-let prixAchattps = 20;
-let prixAchattps2 = 200;
-let prixAchattps3 = 2000;
-let prixAchattps4 = 20000;
+let prixAchattps = 12;
+let prixAchattps2 = 1200;
+let prixAchattps3 = 12000;
+let prixAchattps4 = 120000;
 let nbAchat1 = 0;
 let nbAchat2 = 0;
 let nbAchat3 = 0;
@@ -74,7 +74,7 @@ achattps.addEventListener('click', () => {
         scoreLabel.textContent = score + ' Tolves';
         tpsUpgrade += 1;
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
-        prixAchattps = 20 * 1.15 ** nbAchattps;
+        prixAchattps = 12 * 1.15 ** nbAchattps;
         prixAchattps = prixAchattps.toFixed(2);
         achattps.textContent = 'TPS coût : ' + prixAchattps;
     }
@@ -90,7 +90,7 @@ achattps2.addEventListener('click', () => {
         scoreLabel.textContent = score + ' Tolves';
         tpsUpgrade += 12;
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
-        prixAchattps2 = 200 * 1.15 ** nbAchattps2;
+        prixAchattps2 = 1200 * 1.15 ** nbAchattps2;
         prixAchattps2 = prixAchattps2.toFixed(2);
         achattps2.textContent = 'TPS coût : ' + prixAchattps2;
     }
@@ -106,7 +106,7 @@ achattps3.addEventListener('click', () => {
         scoreLabel.textContent = score + ' Tolves';
         tpsUpgrade += 120;
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
-        prixAchattps3 = 2000 * 1.15 ** nbAchattps3;
+        prixAchattps3 = 12000 * 1.15 ** nbAchattps3;
         prixAchattps3 = prixAchattps3.toFixed(2);
         achattps3.textContent = 'TPS coût : ' + prixAchattps3;
     }
@@ -122,7 +122,7 @@ achattps4.addEventListener('click', () => {
         scoreLabel.textContent = score + ' Tolves';
         tpsUpgrade += 1200;
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
-        prixAchattps4 = 20000 * 1.15 ** nbAchattps4;
+        prixAchattps4 = 120000 * 1.15 ** nbAchattps4;
         prixAchattps4 = prixAchattps4.toFixed(2);
         achattps4.textContent = 'TPS coût : ' + prixAchattps4;
     }
