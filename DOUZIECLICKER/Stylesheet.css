@@ -167,10 +167,11 @@ h1 {
     grid-column: 0,1;
     grid-row: 1,2;
 }
+/*
 #achattps3{
     grid-column: 1,0;
     grid-row: 0,1;
-}
+}*/
 #achattps4{
     grid-column: 1,0;
     grid-row: 1,2;
