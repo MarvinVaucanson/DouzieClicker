@@ -3,31 +3,43 @@
 const bouton1 = document.getElementById('boutonPrincipal');
 const achattps = document.getElementById('achattps');
 const achattps2 = document.getElementById('achattps2');
+const achattps3 = document.getElementById('achattps3');
+const achattps4 = document.getElementById('achattps4');
 const achat1 = document.getElementById('achat1');
 const scoreLabel = document.getElementById('Score');
 const achat2 = document.getElementById('achat2');
 const achat3 = document.getElementById('achat3');
+const achat4 = document.getElementById('achat4');
 const labelTotal = document.getElementById('tolveTotal');
 const labelNbAchat1 = document.getElementById('nombreAchatClick1');
 const labelNbAchat2 = document.getElementById('nombreAchatClick2');
 const labelNbAchat3 = document.getElementById('nombreAchatClick3')
+const labelNbAchat4 = document.getElementById('nombreAchatClick4')
 const labelAchatTps1 = document.getElementById('nombreAchatTps1');
-const labelAchatTps2 = document.getElementById('nombreAchatTps1');
+const labelAchatTps2 = document.getElementById('nombreAchatTps2');
+const labelAchatTps3 = document.getElementById('nombreAchatTps3');
+const labelAchatTps4 = document.getElementById('nombreAchatTps4');
 const labeltpsmain = document.getElementById('tolveParSec');
 
-let score = 0;
+let score = 120000;
 let total = 0;
 let click = 1;
 let prixAchat1 = 17.25;
 let prixAchat2 = 115;
 let prixAchat3 = 1265;
-let prixAchattps = 20;
-let prixAchattps2 = 100;
+let prixAchat4 = 120000;
+let prixAchattps = 12;
+let prixAchattps2 = 1200;
+let prixAchattps3 = 12000;
+let prixAchattps4 = 120000;
 let nbAchat1 = 0;
 let nbAchat2 = 0;
 let nbAchat3 = 0;
+let nbAchat4 = 0;
 let nbAchattps = 0;
 let nbAchattps2 = 0;
+let nbAchattps3 = 0;
+let nbAchattps4 = 0;
 let tpsUpgrade = 0;
 var intervalId;
 let particules = true;
@@ -66,7 +78,7 @@ achattps.addEventListener('click', () => {
         scoreLabel.textContent = score + ' Tolves';
         tpsUpgrade += 1;
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
-        prixAchattps = 20 * 1.15 ** nbAchattps;
+        prixAchattps = 12 * 1.15 ** nbAchattps;
         prixAchattps = prixAchattps.toFixed(2);
         achattps.textContent = 'TPS coût : ' + prixAchattps;
     }
@@ -80,11 +92,43 @@ achattps2.addEventListener('click', () => {
         score -= prixAchattps2;
         score = Math.round(score * 100) / 100;
         scoreLabel.textContent = score + ' Tolves';
-        tpsUpgrade += 3;
+        tpsUpgrade += 12;
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
-        prixAchattps2 = 100 * 1.15 ** nbAchattps2;
+        prixAchattps2 = 1200 * 1.15 ** nbAchattps2;
         prixAchattps2 = prixAchattps2.toFixed(2);
         achattps2.textContent = 'TPS coût : ' + prixAchattps2;
+    }
+});
+
+achattps3.addEventListener('click', () => {
+    
+    if (score >= prixAchattps3) {
+        nbAchattps3 += 1;
+        labelAchatTps3.textContent = nbAchattps3;
+        score -= prixAchattps3;
+        score = Math.round(score * 100) / 100;
+        scoreLabel.textContent = score + ' Tolves';
+        tpsUpgrade += 120;
+        labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
+        prixAchattps3 = 12000 * 1.15 ** nbAchattps3;
+        prixAchattps3 = prixAchattps3.toFixed(2);
+        achattps3.textContent = 'TPS coût : ' + prixAchattps3;
+    }
+});
+
+achattps4.addEventListener('click', () => {
+    
+    if (score >= prixAchattps4) {
+        nbAchattps4 += 1;
+        labelAchatTps4.textContent = nbAchattps4;
+        score -= prixAchattps4;
+        score = Math.round(score * 100) / 100;
+        scoreLabel.textContent = score + ' Tolves';
+        tpsUpgrade += 1200;
+        labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
+        prixAchattps4 = 120000 * 1.15 ** nbAchattps4;
+        prixAchattps4 = prixAchattps4.toFixed(2);
+        achattps4.textContent = 'TPS coût : ' + prixAchattps4;
     }
 });
 
@@ -130,21 +174,21 @@ achat3.addEventListener('click', () => {
         achat3.textContent = 'Achat3 coût : ' + prixAchat3;
     }
 });
-/*
+
 achat4.addEventListener('click', () => {
-    if (score >= prixAchat1) {
-        nbAchat1 += 1;
-        labelNbAchat1.textContent = nbAchat1;
-        score -= prixAchat1;
+    if (score >= prixAchat4) {
+        nbAchat4 += 1;
+        labelNbAchat4.textContent = nbAchat4;
+        score -= prixAchat4;
         score = Math.round(score * 100) / 100;
-        click += 1;
+        click += tpsUpgrade*0.12;
         scoreLabel.textContent = score + ' Tolves';
-        prixAchat1 = 17.25 * 1.15 ** nbAchat1;
-        prixAchat1 = prixAchat1.toFixed(2);
-        achat1.textContent = 'Achat1 coût : ' + prixAchat1;
+        prixAchat4= 120000 * 1.15 ** nbAchat4;
+        prixAchat4 = prixAchat4.toFixed(2);
+        achat4.textContent = 'Super Achat coût : ' + prixAchat4;
     }
 });
-
+/*
 achat5.addEventListener('click', () => {
     if (score >= prixAchat1) {
         nbAchat1 += 1;
