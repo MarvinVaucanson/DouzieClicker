@@ -156,6 +156,7 @@ achat5.addEventListener('click', () => {
         prixAchat1 = 17.25 * 1.15 ** nbAchat1;
         prixAchat1 = prixAchat1.toFixed(2);
         achat1.textContent = 'Achat1 coût : ' + prixAchat1;
+        gittest
     }
 });
 
