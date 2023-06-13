@@ -22,7 +22,7 @@ let prixAchat1 = 17.25;
 let prixAchat2 = 115;
 let prixAchat3 = 1265;
 let prixAchattps = 20;
-let prixAchattps2 = 100;
+let prixAchattps2 = 200;
 let nbAchat1 = 0;
 let nbAchat2 = 0;
 let nbAchat3 = 0;
@@ -82,7 +82,7 @@ achattps2.addEventListener('click', () => {
         scoreLabel.textContent = score + ' Tolves';
         tpsUpgrade += 3;
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
-        prixAchattps2 = 100 * 1.15 ** nbAchattps2;
+        prixAchattps2 = 200 * 1.15 ** nbAchattps2;
         prixAchattps2 = prixAchattps2.toFixed(2);
         achattps2.textContent = 'TPS coût : ' + prixAchattps2;
     }

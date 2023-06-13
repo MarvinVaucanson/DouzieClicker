@@ -153,14 +153,26 @@ h1 {
     width: 43vw;
     height: 8.854vw;
     background-color: #CB9B6E;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
 }
 
 #achattps{
-    grid-column: 0,1;
-    grid-row: 0,1;
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 0;
+    grid-row-end: 1;
 }
 #achattps2{
     grid-column: 0,1;
+    grid-row: 1,2;
+}
+#achattps3{
+    grid-column: 1,0;
+    grid-row: 0,1;
+}
+#achattps4{
+    grid-column: 1,0;
     grid-row: 1,2;
 }
 
