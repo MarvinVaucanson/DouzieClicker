@@ -26,6 +26,7 @@ let nbAchat3 = 0;
 let nbAchattps = 0;
 let tpsUpgrade = 0;
 var intervalId;
+let particules = true;
 
 
 function updateScore() {
@@ -170,18 +171,32 @@ achat6.addEventListener('click', () => {
 
 // création des particules
 function createParticles(x, y) {
-    const divParticule = document.querySelector('.divParticule');
+    if (particules) {
+        const divParticule = document.querySelector('.divParticule');
 
-    //création des 12 particules
-    for (let i = 0; i < 12; i++) {
-        const particle = document.createElement('div');  // une div qui sera une particule
-        particle.classList.add('particule');
-        particle.style.left = x + getRandomOffset() + 'px';
-        particle.style.top = y + getRandomOffset() + 'px';
-        particle.style.setProperty('--tx', getRandomOffset() + 'px');
-        particle.style.setProperty('--ty', getRandomOffset() + 'px');
-        particle.style.setProperty('--r', getRandomRotation());
-        divParticule.appendChild(particle);
+        //création des 12 particules
+        for (let i = 0; i < 12; i++) {
+            const particle = document.createElement('div');  // une div qui sera une particule
+            particle.classList.add('particule');
+            particle.style.left = x + getRandomOffset() + 'px';
+            particle.style.top = y + getRandomOffset() + 'px';
+            particle.style.setProperty('--tx', getRandomOffset() + 'px');
+            particle.style.setProperty('--ty', getRandomOffset() + 'px');
+            particle.style.setProperty('--r', getRandomRotation());
+            divParticule.appendChild(particle);
+        }
+    }
+}
+
+const boutonPariculesOnOff = document.getElementById('btnParticulesOnOff')
+function particulesOnOff() {
+    if (particules) {
+        particules = false;
+        boutonPariculesOnOff.textContent = "On Particules"
+    }else {
+        particules = true;
+        boutonPariculesOnOff.textContent = "Off Particules"
+
     }
 }
 
