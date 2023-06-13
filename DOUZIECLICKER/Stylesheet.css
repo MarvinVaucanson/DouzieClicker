@@ -227,7 +227,7 @@ h1 {
     font-size: 1.25vw;
 }
 
-#Réglages {
+#Achivements {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,12 +242,12 @@ h1 {
 }
 
 #particuleOnOff {
-    margin: 250px 0 0 0;
+    margin: 13vw 0 0 0;
 }
 
 #particuleOnOff button {
-    width: 100px;
-    height: 33px;
+    width: 5.21vw;
+    height: 1.72vw;
     background-color: black;
     color: #FFFFFF;
     border: None;
@@ -261,4 +261,50 @@ h1 {
 #particuleOnOff button:active {
     background-color: whitesmoke;
     color: #801313;
+}
+
+#Achivement1 {
+    display: flex;
+    justify-content: center;
+    height: 3.125vw;
+    background-color: #43a1cd
+}
+
+#Achivement1 label {
+    font-size: 2.06vw;
+}
+
+.entreLignes2 {
+    height: 0.13vw;
+    background-color: black;
+    width: 22vw;
+}
+
+#DOUZEE {
+    height: 50%;
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.animated {
+    animation: myAnimation 1s forwards;
+}
+
+@keyframes myAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
 }
