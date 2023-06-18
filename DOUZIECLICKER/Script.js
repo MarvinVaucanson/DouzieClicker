@@ -80,7 +80,7 @@ achattps.addEventListener('click', () => {
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
         prixAchattps = 12 * 1.15 ** nbAchattps;
         prixAchattps = prixAchattps.toFixed(2);
-        achattps.textContent = 'TPS coût : ' + prixAchattps;
+        achattps.textContent = 'Cuisine : ' + prixAchattps;
     }
 });
 
@@ -96,7 +96,7 @@ achattps2.addEventListener('click', () => {
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
         prixAchattps2 = 1200 * 1.15 ** nbAchattps2;
         prixAchattps2 = prixAchattps2.toFixed(2);
-        achattps2.textContent = 'TPS coût : ' + prixAchattps2;
+        achattps2.textContent = 'Laboratoire : ' + prixAchattps2;
     }
 });
 
@@ -112,7 +112,7 @@ achattps3.addEventListener('click', () => {
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
         prixAchattps3 = 12000 * 1.15 ** nbAchattps3;
         prixAchattps3 = prixAchattps3.toFixed(2);
-        achattps3.textContent = 'TPS coût : ' + prixAchattps3;
+        achattps3.textContent = 'Ordinateur Quantique : ' + prixAchattps3;
     }
 });
 
@@ -128,7 +128,7 @@ achattps4.addEventListener('click', () => {
         labeltpsmain.textContent = tpsUpgrade + ' Tolves/s';
         prixAchattps4 = 120000 * 1.15 ** nbAchattps4;
         prixAchattps4 = prixAchattps4.toFixed(2);
-        achattps4.textContent = 'TPS coût : ' + prixAchattps4;
+        achattps4.textContent = 'Accélérateur de particule : ' + prixAchattps4;
     }
 });
 
@@ -142,7 +142,7 @@ achat1.addEventListener('click', () => {
         scoreLabel.textContent = score + ' Tolves';
         prixAchat1 = 17.25 * 1.15 ** nbAchat1;
         prixAchat1 = prixAchat1.toFixed(2);
-        achat1.textContent = 'Achat1 coût : ' + prixAchat1;
+        achat1.textContent = 'Clic de bronze coût : ' + prixAchat1;
     }
 });
 
@@ -156,7 +156,7 @@ achat2.addEventListener('click', () => {
         scoreLabel.textContent = score + ' Tolves';
         prixAchat2 = 115 * 1.15 ** nbAchat2;
         prixAchat2 = prixAchat2.toFixed(2);
-        achat2.textContent = 'Achat2 coût : ' + prixAchat2;
+        achat2.textContent = "Clic d'argent coût : " + prixAchat2;
     }
 });
 
@@ -171,7 +171,7 @@ achat3.addEventListener('click', () => {
         scoreLabel.textContent = score + ' Tolves';
         prixAchat3 = 1265 * 1.15 ** nbAchat3;
         prixAchat3 = prixAchat3.toFixed(2);
-        achat3.textContent = 'Achat3 coût : ' + prixAchat3;
+        achat3.textContent = "Clic d'or coût : " + prixAchat3;
     }
 });
 
@@ -185,7 +185,7 @@ achat4.addEventListener('click', () => {
         scoreLabel.textContent = score + ' Tolves';
         prixAchat4= 120000 * 1.15 ** nbAchat4;
         prixAchat4 = prixAchat4.toFixed(2);
-        achat4.textContent = 'Super Achat coût : ' + prixAchat4;
+        achat4.textContent = "Clic de platine : " + prixAchat4;
     }
 });
 
