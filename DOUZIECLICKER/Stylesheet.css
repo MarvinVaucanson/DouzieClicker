@@ -74,6 +74,8 @@ body {
     border-radius: 100%;
 }
 
+
+
 #boutonPrincipal::before {
     content: "";
     position: absolute;
@@ -121,6 +123,7 @@ body {
     background-color: black;
 }
 
+
 #pageMagasin {
     display: flex;
     flex-direction: column;
@@ -133,7 +136,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #801313;
-    height: 6.302vw;
+    height: 25.302vw;
+    
 }
 
 h1 {
@@ -142,48 +146,63 @@ h1 {
     font-family: "Arial", serif;
     text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;}
 
-#pageMagasin .entreLignes {
-    width: 43vw;
-    height: 0.26vw;
-    background-color: black;
-}
+
 
 #magasin2 {
-    display: grid;
     width: 43vw;
-    height: 8.854vw;
-    background-color: #CB9B6E;
-    grid-template-columns: 2;
-    grid-template-rows: 2;
+    height: 7vw;
+    background-image: url('MagasinItem.png');
+    background-position: center;
+    background-size: cover;
+     
+    
 }
 
-#achattps{
-    grid-column-start: 0;
-    grid-column-end: 1;
-    grid-row-start: 0;
-    grid-row-end: 1;
-}
-#achattps2{
-    grid-column: 0,1;
-    grid-row: 1,2;
-}
-/*
-#achattps3{
-    grid-column: 1,0;
-    grid-row: 0,1;
-}*/
-#achattps4{
-    grid-column: 1,0;
-    grid-row: 1,2;
-}
+
+
+ 
+/*.test { 
+    display: flex; 
+    flex-basis: calc(50% - 40px);  
+    justify-content: center;
+    flex-direction: column;
+    
+ }*/
+
+ .pourkoi {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .pourkoi > div {
+    display: flex; 
+    flex-basis: calc(50% - 40px);  
+    justify-content: center;
+    flex-direction: column;
+  }
+  .pourkoi > div > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .box { margin-right: 50px; 
+    margin-left: 20px;}
+
+    .boxi    { margin-left: 10px;
+    }
+    
+
 
 #shopGlissant {
     display: grid;
-    grid-template-rows: repeat(6, 5.3647638833vw);
+    grid-template-rows: repeat(5, 5.3647638833vw);
 }
 
 .item {
     position: relative;
+    
 }
 
 .item .entreLignes {
@@ -192,7 +211,6 @@ h1 {
 }
 
 .item button {
-    background-color: #CB9B6E;
     height: 100%;
     width: 100%;
     border: none;
@@ -201,38 +219,39 @@ h1 {
 #pageStats {
     width: 22vw;
     height: var(--taille);
-    background-color: #9ADFEB;
+    background-color: #ADADAD;
 }
 
-#Statistiques {
-    display: flex;
-    justify-content: center;
-    height: 6.302vw;
-    background-color: #009F9F;
-}
 
-#Statistiques h1 {
-    margin-left: 2.344vw;
-}
 
+
+#Bloc{
+    height: 12vw;
+}
 #statGlobal {
     display: flex;
     flex-direction: column;
-    height: 18vw;
+    height: 32vw;
+    background-image: url(Frigo.png);
+    background-position: center;
+    background-size: cover;
 }
 
 #statGlobal div {
     display: flex;
     justify-content: space-evenly;
-    font-size: 1.25vw;
+    font-size: 1vw;
 }
 
 #Achivements {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6.302vw;
-    background-color: #009F9F;
+    height: 15.50vw;
+    background-image: url(Succès.png);
+    background-position: center;
+    background-size: cover;
+    
 }
 
 #pageStats .entreLignes{
@@ -252,7 +271,11 @@ h1 {
     color: #FFFFFF;
     border: None;
 }
-
+.buttonItem{
+    background-image: url('MagasinItem.png');
+    background-position: center;
+    background-size: cover;
+}
 #particuleOnOff button:hover {
     background-color: gray;
     color: #801313;
@@ -267,7 +290,8 @@ h1 {
     display: flex;
     justify-content: center;
     height: 3.125vw;
-    background-color: #43a1cd
+    background-color: #7F6A3D;
+
 }
 
 #Achivement1 label {
@@ -284,8 +308,6 @@ h1 {
     height: 50%;
     position: absolute;
     z-index: 9999;
-    left: 50%;
-    top: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
 }

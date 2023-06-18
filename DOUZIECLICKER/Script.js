@@ -21,7 +21,7 @@ const labelAchatTps3 = document.getElementById('nombreAchatTps3');
 const labelAchatTps4 = document.getElementById('nombreAchatTps4');
 const labeltpsmain = document.getElementById('tolveParSec');
 
-let score = 120000;
+let score = 0;
 let total = 0;
 let click = 1;
 let prixAchat1 = 17.25;
