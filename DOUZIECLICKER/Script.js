@@ -188,6 +188,7 @@ achat4.addEventListener('click', () => {
         achat4.textContent = 'Super Achat coût : ' + prixAchat4;
     }
 });
+
 /*
 achat5.addEventListener('click', () => {
     if (score >= prixAchat1) {
