@@ -1,3 +1,3 @@
 # DouzieClicker
 
-BAPTISTE CA VA??
+Un clicker, un douze 
